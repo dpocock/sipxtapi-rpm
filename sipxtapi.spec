@@ -16,6 +16,7 @@ BuildRequires: openssl-devel >= 0.9.8
 BuildRequires: pcre-devel
 BuildRequires: spandsp-devel
 BuildRequires: xerces-c-devel
+BuildRequires: gcc-c++
 Requires: openssl >= 0.9.8
 
 %description
