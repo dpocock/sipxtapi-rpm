@@ -1,6 +1,6 @@
 Name: sipxtapi
 Version: 3.3.0~test11
-Release: 3
+Release: 4
 
 Summary: SIP stack, RTP media framework and codecs
 License: LGPLv2
@@ -63,19 +63,25 @@ rm -rf %{buildroot}%{_bindir}
 %postun -p /sbin/ldconfig
 
 %files
+%defattr(-, root, root, -)
 %doc COPYING
 %{_libdir}/lib*.so.*
 %{_libdir}/sipxtapi/
 
 %files devel
+%defattr(-, root, root, -)
+%doc COPYING
 %{_includedir}/sipxtapi/
 %{_libdir}/lib*.so
 %{_datarootdir}/sipxtapi/
 
 %files doc
-%{_docdir}
+%defattr(-, root, root, -)
+%doc %{_docdir}/%{name}/*
 
 %changelog
+* Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-4
+- Tweak documentation packaging
 * Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-3
 - Various spec file improvements
 * Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-2
