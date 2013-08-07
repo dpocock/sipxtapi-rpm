@@ -3,7 +3,7 @@ Version: 3.3.0~test11
 Release: 3
 
 Summary: SIP stack, RTP media framework and codecs
-License: LGPLv2.1
+License: LGPLv2
 Url: http://www.sipxtapi.org
 
 Source: http://www.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
