@@ -72,6 +72,8 @@ rm -rf %{buildroot}%{_bindir}
 %{_docdir}
 
 %changelog
+* Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-2
+- Various spec file improvements
 * Mon May  6 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-1
 - Initial build
 
