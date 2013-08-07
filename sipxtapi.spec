@@ -1,6 +1,6 @@
 Name: sipxtapi
 Version: 3.3.0~test11
-Release: 2
+Release: 3
 
 Summary: SIP stack, RTP media framework and codecs
 License: LGPLv2.1
@@ -16,7 +16,6 @@ BuildRequires: openssl-devel >= 0.9.8
 BuildRequires: pcre-devel
 BuildRequires: spandsp-devel
 BuildRequires: xerces-c-devel
-Requires: openssl >= 0.9.8
 
 %description
 sipXtapi is a framework that makes it easy to construct SIP user agents,
@@ -30,10 +29,10 @@ Summary: Development files for %{name}
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
-%package apidoc
+%package doc
 Summary: API documentation for %{name}
 
-%description apidoc
+%description doc
 sipXtapi is a framework that makes it easy to construct SIP user agents,
 including softphones and telephony servers.
 
@@ -66,12 +65,14 @@ rm -rf %{buildroot}%{_bindir}
 %files devel
 %{_includedir}/sipxtapi/
 %{_libdir}/lib*.so
-%{_datarootdir}
+%{_datarootdir}/sipxtapi/
 
-%files apidoc
+%files doc
 %{_docdir}
 
 %changelog
+* Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-3
+- Various spec file improvements
 * Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-2
 - Various spec file improvements
 * Mon May  6 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-1
