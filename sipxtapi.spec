@@ -1,12 +1,12 @@
 Name: sipxtapi
 Version: 3.3.0~test11
-Release: 1
+Release: 2
 
 Summary: SIP stack, RTP media framework and codecs
-License: LGPL
+License: LGPLv2.1
 Url: http://www.sipxtapi.org
 
-Source: http://www.sipxtapi.org/files/pub/sipX/%name-%version.tar.gz
+Source: http://www.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
 
 BuildRequires: libtool automake autoconf
 BuildRequires: cppunit-devel
@@ -16,25 +16,22 @@ BuildRequires: openssl-devel >= 0.9.8
 BuildRequires: pcre-devel
 BuildRequires: spandsp-devel
 BuildRequires: xerces-c-devel
-BuildRequires: gcc-c++
 Requires: openssl >= 0.9.8
 
 %description
 sipXtapi is a framework that makes it easy to construct SIP user agents,
-including softphones and telephony servers.
+including soft-phones and telephony servers.
 
 %package devel
-Requires: %{name}-libs%{?_isa} = %{version}-%{release}
-Summary: Header files for %name
+Requires: %{name}%{?_isa} = %{version}-%{release}
+Summary: Development files for %{name}
 
 %description devel
-sipXtapi is a framework that makes it easy to construct SIP user agents,
-including softphones and telephony servers.
-
-This package provides headers and resources for development.
+The %{name}-devel package contains libraries and header files for
+developing applications that use %{name}.
 
 %package apidoc
-Summary: API documentation for %name
+Summary: API documentation for %{name}
 
 %description apidoc
 sipXtapi is a framework that makes it easy to construct SIP user agents,
