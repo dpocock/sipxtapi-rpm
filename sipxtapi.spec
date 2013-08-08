@@ -1,6 +1,6 @@
 Name: sipxtapi
 Version: 3.3.0~test12
-Release: 5
+Release: 6
 
 Summary: SIP stack, RTP media framework and codecs
 # LGPLv2 is used for the bulk of the code and is the most restrictive
@@ -84,6 +84,8 @@ rm -rf %{buildroot}%{_bindir}
 %{_docdir}/%{name}/
 
 %changelog
+* Thu Aug  8 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test12-6
+- More fixes
 * Thu Aug  8 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test12-5
 - New tarball, fix download URL
 * Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-4
