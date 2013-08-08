@@ -3,7 +3,13 @@ Version: 3.3.0~test12
 Release: 5
 
 Summary: SIP stack, RTP media framework and codecs
-License: LGPLv2
+# LGPLv2 is used for the bulk of the code and is the most restrictive
+# license.
+# Some individual source files are marked with a BSD-style license
+# The wording of these licenses varies slightly from one author
+# to the next but the terms are clearly BSD
+# Individual authors are named in source files
+License: LGPLv2 and BSD
 Url: http://www.sipxtapi.org
 
 Source: http://download.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
@@ -50,12 +56,13 @@ make %{?_smp_mflags}
 # sipXtapi provides unit tests but they are not currently invoked
 # automatically as they demand network access and other local resources
 # that have to be manually configured
-#%check
+#%%check
 
 %install
 make DESTDIR=%{buildroot} install
 rm -f %{buildroot}%{_libdir}/lib*.a
 rm -f %{buildroot}%{_libdir}/lib*.la
+rm -f %{buildroot}%{_libdir}/%{name}/codecs/codec_*.la
 rm -rf %{buildroot}%{_bindir}
 
 %post -p /sbin/ldconfig
@@ -63,21 +70,18 @@ rm -rf %{buildroot}%{_bindir}
 %postun -p /sbin/ldconfig
 
 %files
-%defattr(-, root, root, -)
 %doc COPYING
 %{_libdir}/lib*.so.*
 %{_libdir}/sipxtapi/
 
 %files devel
-%defattr(-, root, root, -)
-%doc COPYING
 %{_includedir}/sipxtapi/
 %{_libdir}/lib*.so
 %{_datarootdir}/sipxtapi/
 
 %files doc
-%defattr(-, root, root, -)
 %doc %{_docdir}/%{name}/*
+%{_docdir}/%{name}/
 
 %changelog
 * Thu Aug  8 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test12-5
