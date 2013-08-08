@@ -1,12 +1,12 @@
 Name: sipxtapi
-Version: 3.3.0~test11
-Release: 4
+Version: 3.3.0~test12
+Release: 5
 
 Summary: SIP stack, RTP media framework and codecs
 License: LGPLv2
 Url: http://www.sipxtapi.org
 
-Source: http://www.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
+Source: http://download.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
 
 BuildRequires: libtool automake autoconf
 BuildRequires: cppunit-devel
@@ -80,6 +80,8 @@ rm -rf %{buildroot}%{_bindir}
 %doc %{_docdir}/%{name}/*
 
 %changelog
+* Thu Aug  8 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test12-5
+- New tarball, fix download URL
 * Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-4
 - Tweak documentation packaging
 * Wed Aug  7 2013 Daniel Pocock <daniel@pocock.com.au> - 3.3.0~test11-3
