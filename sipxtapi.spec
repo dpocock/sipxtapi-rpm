@@ -21,7 +21,6 @@ BuildRequires: gsm-devel
 BuildRequires: openssl-devel >= 0.9.8
 BuildRequires: pcre-devel
 BuildRequires: spandsp-devel
-BuildRequires: xerces-c-devel
 
 %description
 sipXtapi is a framework that makes it easy to construct SIP user agents,
@@ -48,7 +47,7 @@ This package provides developer documentation about the API.
 %setup -q
 
 %build
-%configure --enable-topology-graph --disable-codec-ilbc --disable-codec-g726 --enable-codec-g722 --enable-codec-gsm --disable-static
+%configure --enable-topology-graph --disable-codec-ilbc --disable-codec-g726 --enable-codec-g722 --enable-codec-gsm --disable-static --with-gsm-libdir=%{_libdir}
 sed -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool
 sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
 make %{?_smp_mflags}
