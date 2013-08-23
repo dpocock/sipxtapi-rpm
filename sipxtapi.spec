@@ -4,11 +4,25 @@ Release:        6%{?dist}
 Summary:        SIP stack, RTP media framework and codecs
 # LGPLv2 is used for the bulk of the code and is the most restrictive
 # license.
+# Some examples include code that is licensed under the GPL or Mozilla
+# license terms.  As these are examples they are not compiled or
+# distributed in the binary package and do not have any impact on
+# the licensing of the sipXtapi libraries or any products depending
+# on sipXtapi libraries.
+# Some codec plugins depend on spandsp, an LGPLv2 licensed library with
+# some GPL sample code. Comments in the sipxtapi source code
+# (MpStaticCodecInit.h) refer to the GPL components of spandsp.
+# The code itself uses the LGPLv2 spandsp package from Fedora.
+# As plugins are optional and they are dynamically linked on demand
+# at runtime, they do not undermine the LGPLv2 licensing of the sipxtapi
+# library itself.
+# Some build system artifacts are GPL licensed.  These artifacts are
+# not part of the binary package.
 # Some individual source files are marked with a BSD-style license
 # The wording of these licenses varies slightly from one author
 # to the next but the terms are clearly BSD
 # Individual authors are named in source files
-License:        LGPLv2 and BSD
+License:        LGPLv2
 Url:            http://www.sipxtapi.org
 Source0:        http://download.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
 
