@@ -21,6 +21,11 @@ Summary:        SIP stack, RTP media framework and codecs
 # Some individual source files are marked with a BSD-style license
 # The wording of these licenses varies slightly from one author
 # to the next but the terms are clearly BSD
+# There area small number of files with a 4-clause BSD license
+# (the DNS resparse code), these are covered by the UCB statement
+# ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change
+# which nullifies the advertising clause and ensures that the code
+# is compatible with the LGPL.
 # Individual authors are named in source files
 License:        LGPLv2
 Url:            http://www.sipxtapi.org
