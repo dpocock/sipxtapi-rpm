@@ -91,7 +91,6 @@ rm -rf %{buildroot}%{_bindir}
 %{_datadir}/sipxtapi/
 
 %files doc
-%doc %{_docdir}/%{name}/*
 %{_docdir}/%{name}/
 
 %changelog
