@@ -25,6 +25,7 @@ Summary:        SIP stack, RTP media framework and codecs
 License:        LGPLv2
 Url:            http://www.sipxtapi.org
 Source0:        http://download.sipxtapi.org/files/pub/sipX/%{name}-%{version}.tar.gz
+Source1:        sipxtapi-rpmlintrc
 
 BuildRequires:  libtool automake autoconf
 BuildRequires:  cppunit-devel
